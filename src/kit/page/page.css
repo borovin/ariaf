@@ -114,7 +114,7 @@
     height: 220px;
 }
 
-.page__background {
+.page__photo {
     position: absolute;
     left: 0;
     top: 0;
@@ -122,10 +122,21 @@
     height: 100%;
     background-size: cover;
     z-index: 1;
+    opacity: 0;
+    transition: opacity 0.5s;
 }
 
-.page__background:target {
+.page__background .page__photo:last-child {
+    opacity: 1;
+}
+
+.page__photo:target {
     z-index: 10;
+    opacity: 1;
+}
+
+.page__photo:target ~ .page__photo {
+    opacity: 0 !important;
 }
 
 .page__footer {
