@@ -114,7 +114,7 @@
     height: 220px;
 }
 
-.page__photo {
+.page__background {
     position: absolute;
     left: 0;
     top: 0;
@@ -123,20 +123,12 @@
     background-size: cover;
     z-index: 1;
     opacity: 0;
-    transition: opacity 0.5s;
+    transition: opacity 1s;
 }
 
-.page__background .page__photo:last-child {
-    opacity: 1;
-}
-
-.page__photo:target {
+.page__background:target {
     z-index: 10;
     opacity: 1;
-}
-
-.page__photo:target ~ .page__photo {
-    opacity: 0 !important;
 }
 
 .page__footer {
@@ -175,10 +167,6 @@
     color: #fff;
     font-size: 13px;
     line-height: 1.5em;
-}
-
-.page_lightOff .page__photoLinks {
-    display: none;
 }
 
 .page__photoLinks {
